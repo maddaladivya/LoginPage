@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-messages.js"></script>
+    <script src="/home/maddaladivya/newlogin/bower_components/angular-md5/angular-md5.js"></script>
+		<style>
+		#blueBar {
+	    background-color: #3B5998;
+	    height: 50px;
+	    left: 0px;
+	    position: absolute;
+	    width: 100%;
+	    }
+	    html,body
+	    {
+	    margin: 0;
+	    padding: 0;
+	    background-color: #dfe3ee;
+	    }
+	    div 
+	    {
+	    display: block;
+		}
+	    h1{
+	    font-family: "Nimbus Sans L";
+  		font-style: normal;
+  		font-weight: bolder;
+  		color: white;
+  		text-align: center;
+  		position: absolute;
+  		left: 150px;
+  		top: -18px;
+		}
+		h3{
+			font-family: "DejaVu Sans";
+			font-style: normal;
+			font-weight: normal;
+			left:10px;
+		}
+		.signupbutton {
+    	background-color: #00EE00;
+    	border: none;
+    	color: white;
+    	padding: 1px 1px;
+    	text-align: center;
+    	text-decoration: none;
+    	display: inline-block;
+    	font-size: 10px;
+    	font-weight: bold;
+    	margin: 4px 2px;
+    	cursor: pointer;
+    	position: absolute;
+    	left: 300px;
+    	bottom: 5px;
+		}
+		.loginmodal-container {
+			background-color: #ffffff;
+			top: 100px;
+			bottom: 100px;
+			position: absolute;
+			width: 700px;
+			margin: 50px auto;
+			left: 300px;
+			text-align: center;
+			font-family: "Arial";
+			font-size: 20px;
+			height: 310px;
+			overflow-wrap: break-word;
+			white-space: nowrap;
+		}
+		.loginmodal-container input[type=submit] {
+            width: 50%;
+            display: block;
+            margin-bottom: 0px;
+            position: relative;
+            left: 160px;
+        }
+        .loginmodal-container input[type=text], input[type=password] {
+            height: 34px;
+  			font-size: 16px;
+  			width: 50%;
+  			margin-bottom: 0px;
+  			margin-top: 0px;
+ 			-webkit-appearance: none;
+  			background: #fff;
+  			border: 1px solid #d9d9d9;
+  			border-top: 1px solid #c0c0c0;
+  			padding: 0 8px;
+  			box-sizing: border-box;
+           -moz-box-sizing: border-box;
+        }
+        .loginmodal-submit {
+            border-top: 0px;
+            color: #fff;
+            text-shadow: 0 1px rgba(0,0,0,0.1); 
+            background-color: #3b5998;
+            padding: 10px 155px;
+            font-family: "Arial";
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        a{
+        	font-family: "DejaVu Sans";
+        	font-weight: normal;
+        	text-decoration: none;
+        	
+        }
+
+		</style>
+	</head>
+	<body>
+	    <div id="blueBar" class="broke-endless-pages">
+	    	<h1>facebook</h1>
+	    	<button class="signupbutton">Sign Up</button>
+	    </div>
+		<div class="loginmodal-container" ng-app="myApp" ng-controller="myCtrl">
+			<h3>Log in to Facebook</h3>
+		    <br><input ng-model="name" value="name" type="text" placeholder="Email address or phone number"></br>
+		    <br><input ng-model="pass" type="password" placeholder="Password"></br>
+			<br><button ng-click="login()" type="sumbit" class="loginmodal-submit">login</button></br> 
+			<h6><a href="https://www.facebook.com/login/identify?ctx=recover&lwv=100">Forgotten account?</a><a href="https://www.facebook.com/r.php?next&locale=en_GB&display=page"> Sign up for Facebook</a></h6>
+		
+		</div>
+		<script>
+      var app = angular.module('myApp', []);
+            app.controller('myCtrl', function($scope) {
+              
+              $scope.login = function(){
+                if ($scope.name === 'divya@gmail.com' && $scope.pass === 'divya') {
+                window.location="https://www.google.com";
+                  }
+                  else {
+              window.alert("wrong");
+            };
+                 } 
+              
+            });
+    </script>
+	</body>
+</html>
